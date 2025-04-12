@@ -1,1 +1,26 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --page-background: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --page-font-family: "Inter", Arial, Helvetica, sans-serif;
+  --accent-font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  --container-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  --content-background: white;
+  --text-weight: 400;
+  --title-weight: 700;
+  --label-stroke-color: #fff;
+  --heart-contour-color: #000;
+  --heart-color: red;
+}

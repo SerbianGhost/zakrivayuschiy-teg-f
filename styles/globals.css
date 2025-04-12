@@ -21,7 +21,9 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+button,
+dialog {
   margin: 0;
   padding: 0;
 }

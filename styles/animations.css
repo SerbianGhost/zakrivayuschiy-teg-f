@@ -1,11 +1,80 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+@keyframes sparks-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: currentColor;
+}
+.anim-button:hover::before {
+  transform: translateX(0);
+}
+.anim-button:focus,
+.anim-button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 black;
+}
+.sparks {
+  opacity: 0;
+  fill: var(--heart-color);
+}
+.contour {
+  transition: fill 0.1s linear 0s;
+  fill: var(--heart-contour-color);
+}
+.heart {
+  transform-origin: center;
+}
+.core {
+  transition: fill 0.3s ease-in-out 0.03s;
+}
+.main-body {
+  transition: fill 0.3s ease-in-out 0s;
+}
+.like-icon:hover .core {
+  transition: fill 0.3s ease-in-out 0s;
+  fill: var(--heart-contour-color);
+}
+.like-icon:hover .main-body {
+  transition: fill 0.3s ease-in-out 0.05s;
+  fill: var(--heart-contour-color);
+}
+.like-icon:active .core {
+  transition: fill 0.3s ease-in-out 0s;
+  fill: var(--heart-color);
+}
+.like-icon:active .main-body {
+  transition: fill 0.3s ease-in-out 0.05s;
+  fill: var(--heart-color);
+}
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body,
+.like-icon.is-liked .contour {
+  fill: var(--heart-color);
+}
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
+.like-icon.is-liked .sparks {
+  animation: sparks-animation 0.3s ease-in 0.3s forwards;
+}
+.like-icon.is-liked .heart {
+  animation: heart-animation 0.3s ease-in 0.1s forwards;
+}
