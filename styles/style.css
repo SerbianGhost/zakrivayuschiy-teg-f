@@ -1,6 +1,3 @@
-.desktop-br {
-  display: none;
-}
 .page {
   position: relative;
   min-inline-size: 320px;
@@ -10,6 +7,8 @@
   background-image: var(--page-background);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   font-weight: var(--text-weight);
 }
 .container {
@@ -34,8 +33,7 @@
   margin-top: 20px;
 }
 .content {
-  margin-top: 102px;
-  margin-bottom: 50px;
+  margin-top: 100px;
   display: grid;
   row-gap: 50px;
 }
@@ -60,6 +58,7 @@
   object-fit: cover;
   object-position: center;
   width: 100%;
+  aspect-ratio: 1/1;
 }
 .card__label {
   position: absolute;
@@ -93,6 +92,7 @@
   font-size: 18px;
   line-height: 21px;
   grid-column: 1/-1;
+  max-width: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem);
 }
 .card__text:not(:first-of-type) {
   margin-top: 27px;
@@ -146,11 +146,11 @@
   color: white;
   z-index: 2;
 }
-.footer {
+.modal-section {
   display: flex;
   justify-content: center;
 }
-.footer__button {
+.modal-section__button {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -158,7 +158,7 @@
   padding: 16px 0;
   gap: 8px;
 }
-.footer__floppy-icon {
+.modal-section__floppy-icon {
   width: 28px;
   height: 28px;
 }
@@ -169,19 +169,20 @@
   width: 100%;
   height: 100%;
 }
-#modal {
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  width: clamp(21.313rem, 2.899vw + 19.454rem, 22.063rem);
+  min-width: 341px;
+  max-width: 353px;
   border: 2px solid currentColor;
   padding: 27px 42px;
   background-color: var(--content-background);
 }
 
-#modal::backdrop {
+.modal::backdrop {
   background-color: #000000;
   opacity: 75%;
 }
@@ -205,6 +206,7 @@
   margin-top: 30px;
   padding: 12.5px 0;
   width: 100%;
+  text-transform: uppercase;
 }
 .filter-retro {
   filter: sepia(0.8) contrast(1.2) brightness(0.9);
@@ -232,20 +234,11 @@
 }
 
 @media (min-width: 1440px) {
-  .mobile-br {
-    display: none;
-  }
-  .desktop-br {
-    display: block;
-  }
-  .footer {
-    margin-top: 2px;
-  }
-  .footer__button {
+  .modal-section__button {
     flex-direction: row;
     justify-content: center;
   }
-  .footer__floppy-icon {
+  .modal-section__floppy-icon {
     width: 21px;
     height: 21px;
   }

@@ -45,25 +45,25 @@
   transform-origin: center;
 }
 .core {
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s linear 0.03s;
 }
 .main-body {
-  transition: fill 0.3s ease-in-out 0s;
+  transition: fill 0.3s linear 0s;
 }
 .like-icon:hover .core {
-  transition: fill 0.3s ease-in-out 0s;
+  transition: fill 0.3s linear 0s;
   fill: var(--heart-contour-color);
 }
 .like-icon:hover .main-body {
-  transition: fill 0.3s ease-in-out 0.05s;
+  transition: fill 0.3s linear 0.05s;
   fill: var(--heart-contour-color);
 }
 .like-icon:active .core {
-  transition: fill 0.3s ease-in-out 0s;
+  transition: fill 0.3s linear 0s;
   fill: var(--heart-color);
 }
 .like-icon:active .main-body {
-  transition: fill 0.3s ease-in-out 0.05s;
+  transition: fill 0.3s linear 0.05s;
   fill: var(--heart-color);
 }
 .like-icon.is-liked .core,
