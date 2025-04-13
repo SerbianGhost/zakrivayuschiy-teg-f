@@ -163,12 +163,12 @@
   z-index: 2;
 }
 
-.modal-section {
+.modal-div {
   display: flex;
   justify-content: center;
 }
 
-.modal-section__button {
+.modal-div__button {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -177,7 +177,7 @@
   gap: 8px;
 }
 
-.modal-section__floppy-icon {
+.modal-div__floppy-icon {
   width: 28px;
   height: 28px;
 }
@@ -247,8 +247,8 @@
   filter: grayscale(100%);
 }
 
-.filter-sepia {
-  filter: sepia(100%);
+.filter-sepia-contrast {
+  filter: sepia(100%) contrast(110%);
 }
 
 .filter-saturate {
@@ -268,12 +268,12 @@
 }
 
 @media (min-width: 1440px) {
-  .modal-section__button {
+  .modal-div__button {
     flex-direction: row;
     justify-content: center;
   }
 
-  .modal-section__floppy-icon {
+  .modal-div__floppy-icon {
     width: 21px;
     height: 21px;
   }
