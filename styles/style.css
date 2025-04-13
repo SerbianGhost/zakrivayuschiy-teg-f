@@ -10,27 +10,32 @@
   background-position: center;
   background-attachment: fixed;
 }
+
 .container {
   width: var(--container-width);
   margin: 0 auto;
 }
+
 .header {
   background-color: var(--content-background);
   padding: clamp(7.5rem, 0.751vw + 7.324rem, 8rem) 0;
   text-align: center;
   border: 2px solid currentColor;
 }
+
 .header__title {
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   text-transform: uppercase;
   font-family: var(--accent-font-family);
 }
+
 .header__sub-title {
   font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
   font-family: var(--accent-font-family);
   text-transform: uppercase;
   margin-top: 20px;
 }
+
 .content {
   margin-top: 100px;
   display: grid;
@@ -41,17 +46,20 @@
   background-color: var(--content-background);
   border: 2px solid currentColor;
 }
+
 .card__title {
   font-size: 18px;
   padding: 4px 10px;
   font-variation-settings: "wght" var(--card-title-weight);
 }
+
 .card__image-wrap {
   min-width: 100%;
   position: relative;
   border-top: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
 }
+
 .card__img {
   display: block;
   object-fit: cover;
@@ -59,6 +67,7 @@
   width: 100%;
   aspect-ratio: 1/1;
 }
+
 .card__label {
   position: absolute;
   top: 25px;
@@ -87,6 +96,7 @@
 .card__content {
   padding: 27px 25px 25px 25px;
 }
+
 .card__text {
   font-size: 18px;
   line-height: 21px;
@@ -94,9 +104,11 @@
   max-width: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem);
   font-variation-settings: "wght" var(--card-text-weight);
 }
+
 .card__text:not(:first-of-type) {
   margin-top: 27px;
 }
+
 .card__button-wrap {
   margin-top: 25px;
   display: flex;
@@ -104,6 +116,7 @@
   align-items: center;
   gap: 5px;
 }
+
 .card__icon-button {
   background-color: transparent;
   cursor: pointer;
@@ -123,12 +136,14 @@
   transition: box-shadow 0.3s ease;
   background-color: var(--content-background);
 }
+
 .card__like-button {
   width: 130px;
   text-align: center;
   padding: 11px 0;
   background-color: transparent;
 }
+
 .anim-button::before {
   content: "";
   width: 100%;
@@ -140,16 +155,19 @@
   transform: translateX(-110%);
   transition: transform 0.5s ease-in-out;
 }
+
 .button__text {
   position: relative;
   mix-blend-mode: difference;
   color: white;
   z-index: 2;
 }
+
 .modal-section {
   display: flex;
   justify-content: center;
 }
+
 .modal-section__button {
   display: flex;
   align-items: center;
@@ -158,17 +176,21 @@
   padding: 16px 0;
   gap: 8px;
 }
+
 .modal-section__floppy-icon {
   width: 28px;
   height: 28px;
 }
+
 .floppy {
   mix-blend-mode: difference;
 }
+
 .floppy use {
   width: 100%;
   height: 100%;
 }
+
 .modal {
   position: fixed;
   top: 50%;
@@ -186,51 +208,63 @@
   background-color: #000000;
   opacity: 75%;
 }
+
 .modal__floppy-icon {
   width: 39px;
   height: 39px;
   flex-shrink: 0;
 }
+
 .modal__content {
   display: flex;
   align-items: center;
   gap: 18px;
 }
+
 .modal__text {
   font-family: var(--accent-font-family);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
 }
+
 .modal__button {
   margin-top: 30px;
   padding: 12.5px 0;
   width: 100%;
   text-transform: uppercase;
 }
-.filter-retro {
-  filter: sepia(0.8) contrast(1.2) brightness(0.9);
+
+.filter-blur {
+  filter: blur(5px);
 }
-.filter-cold {
-  filter: contrast(1.1) saturate(0.7) hue-rotate(180deg);
+
+.filter-contrast {
+  filter: contrast(200%);
 }
-.filter-warm {
-  filter: sepia(0.4) brightness(1.1) saturate(1.4);
+
+.filter-grayscale {
+  filter: grayscale(100%);
 }
-.filter-pop {
-  filter: saturate(2.5) contrast(1.2);
+
+.filter-sepia {
+  filter: sepia(100%);
 }
-.filter-soft {
-  filter: blur(1.5px) brightness(1.05) contrast(0.95);
+
+.filter-saturate {
+  filter: saturate(200%);
 }
-.filter-ice {
-  filter: hue-rotate(200deg) brightness(1.1) saturate(1.2);
+
+.filter-invert {
+  filter: invert(100%);
 }
-.filter-mono {
-  filter: grayscale(1) contrast(1.4);
+
+.filter-hue-rotate {
+  filter: hue-rotate(90deg);
 }
-.filter-neon {
-  filter: hue-rotate(290deg) saturate(2) contrast(1.1);
+
+.filter-brightness {
+  filter: brightness(2);
 }
 
 @media (min-width: 1440px) {
@@ -238,6 +272,7 @@
     flex-direction: row;
     justify-content: center;
   }
+
   .modal-section__floppy-icon {
     width: 21px;
     height: 21px;
