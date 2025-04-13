@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  font-weight: var(--text-weight);
 }
 .container {
   width: var(--container-width);
@@ -45,7 +44,7 @@
 .card__title {
   font-size: 18px;
   padding: 4px 10px;
-  font-weight: var(--title-weight);
+  font-variation-settings: "wght" var(--card-title-weight);
 }
 .card__image-wrap {
   min-width: 100%;
@@ -93,6 +92,7 @@
   line-height: 21px;
   grid-column: 1/-1;
   max-width: clamp(20.063rem, 30.516vw + 12.91rem, 40.375rem);
+  font-variation-settings: "wght" var(--card-text-weight);
 }
 .card__text:not(:first-of-type) {
   margin-top: 27px;

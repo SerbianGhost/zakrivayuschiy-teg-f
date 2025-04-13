@@ -15,11 +15,11 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   --page-font-family: "Inter", Arial, Helvetica, sans-serif;
-  --accent-font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  --accent-font-family: "Press Start 2P", fantasy;
   --container-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   --content-background: white;
-  --text-weight: 400;
-  --title-weight: 700;
+  --card-title-weight: 700;
+  --card-text-weight: 400;
   --label-stroke-color: #fff;
   --heart-contour-color: #000;
   --heart-color: red;

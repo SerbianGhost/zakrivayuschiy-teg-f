@@ -66,9 +66,16 @@
   transition: fill 0.3s linear 0.05s;
   fill: var(--heart-color);
 }
-.like-icon.is-liked .core,
-.like-icon.is-liked .main-body,
+.like-icon.is-liked .core {
+  transition: fill 0.3s linear 0s;
+  fill: var(--heart-color);
+}
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--heart-color);
+}
 .like-icon.is-liked .contour {
+  transition: fill 0.3s linear 0.08s;
   fill: var(--heart-color);
 }
 
